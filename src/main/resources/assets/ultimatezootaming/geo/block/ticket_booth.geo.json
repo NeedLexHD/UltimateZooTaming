@@ -1,0 +1,89 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.ticket_booth",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 4,
+        "visible_bounds_height": 5,
+        "visible_bounds_offset": [0, 1.5, 0]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [0, 0, 0],
+          "cubes": [
+            {
+              "comment": "mur arriere (face oppose au joueur)",
+              "origin": [-8, 0, -8],
+              "size": [16, 28, 1],
+              "uv": [0, 0]
+            },
+            {
+              "comment": "mur lateral gauche",
+              "origin": [-8, 0, -8],
+              "size": [1, 28, 16],
+              "uv": [18, 0]
+            },
+            {
+              "comment": "mur lateral droit",
+              "origin": [7, 0, -8],
+              "size": [1, 28, 16],
+              "uv": [36, 0]
+            },
+            {
+              "comment": "toit debordant",
+              "origin": [-9, 27, -9],
+              "size": [18, 1, 19],
+              "uv": [0, 30]
+            },
+            {
+              "comment": "gouttiere avant",
+              "origin": [-9, 25, 9],
+              "size": [18, 2, 1],
+              "uv": [0, 32]
+            },
+            {
+              "comment": "comptoir bas cote joueur (hauteur 10px = mi-taille)",
+              "origin": [-8, 0, 7],
+              "size": [16, 10, 1],
+              "uv": [0, 34]
+            },
+            {
+              "comment": "rebord comptoir",
+              "origin": [-8, 9, 7],
+              "size": [16, 1, 1.5],
+              "uv": [0, 46]
+            },
+            {
+              "comment": "vitre haute transparente (entre comptoir et toit)",
+              "origin": [-8, 12, 7],
+              "size": [16, 13, 0.5],
+              "uv": [0, 48]
+            },
+            {
+              "comment": "traverse centrale vitre",
+              "origin": [-8, 17.5, 7],
+              "size": [16, 1, 0.5],
+              "uv": [34, 48]
+            },
+            {
+              "comment": "sol interieur",
+              "origin": [-8, 0, -8],
+              "size": [16, 1, 16],
+              "uv": [0, 50]
+            },
+            {
+              "comment": "bandeau enseigne BILLETS",
+              "origin": [-8, 28, -8],
+              "size": [16, 4, 16],
+              "uv": [0, 60]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
