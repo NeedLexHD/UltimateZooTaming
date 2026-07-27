@@ -12,10 +12,10 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.level.block.state.BlockState;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Calcule la satisfaction (0-100) d'un familier dans son enclos, SANS jamais
@@ -28,9 +28,11 @@ import java.util.UUID;
  */
 public class WelfareCalculator {
 
-    // Cache d'habitat par zone (scan couteux fait 1x/minute, partage entre animaux)
+    // Cache d'habitat par zone (scan couteux fait 1x/minute, partage entre animaux).
+    // ConcurrentHashMap : plusieurs threads (tick + capability events) lisent/ecrivent
+    // simultanement ; HashMap ordinaire se corrompt silencieusement dans ce cas.
     private record HabitatCache(long computedAt, boolean hasWater, boolean hasVegetation, boolean hasLava) {}
-    private static final Map<UUID, HabitatCache> HABITAT_CACHE = new HashMap<>();
+    private static final Map<UUID, HabitatCache> HABITAT_CACHE = new ConcurrentHashMap<>();
     private static final long HABITAT_TTL = 1200; // 60s
 
     public static int compute(ServerLevel level, LivingEntity mob, ZooZone zone) {
@@ -54,15 +56,12 @@ public class WelfareCalculator {
         int space = spaceScore(level, mob, zone);
         int habitat = habitatScore(level, mob, zone);
         // ENRICHISSEMENT : les jouets poses dans l'enclos remontent l'habitat.
-        // Lecture d'un registre, jamais de scan : cout negligeable.
         int toys = com.lex3d.ultimatezootaming.blocks.EnrichmentBlock.countInZone(level, zone);
         if (toys > 0) habitat = Math.min(25, habitat + toys * 3);
         int food = foodScore(level, mob, zone);
         int company = companyRaw;
         int health = healthScore(mob);
 
-        // Le modificateur de trait s'applique sur la sante (critere "moral general"),
-        // borne pour rester dans [0, max].
         health = Math.max(0, Math.min(10, health + trait.getWelfareModifier()));
 
         return new Breakdown(space, habitat, food, company, health);
@@ -79,18 +78,15 @@ public class WelfareCalculator {
         int animals = countAnimalsInZone(level, zone);
         if (animals <= 0) animals = 1;
         double perAnimal = (double) zone.size() / animals;
-        // 12+ cases/animal = parfait ; 2 = minimal
         double ratio = Math.min(1.0, (perAnimal - 2) / 10.0);
         return (int) Math.round(Math.max(0, ratio) * 30);
     }
 
-    /** HABITAT (0-25) : les blocs de l'enclos correspondent-ils au PROFIL du mob ?
-     *  (profil = override admin /zootame habitats, sinon heuristique auto). */
+    /** HABITAT (0-25) : les blocs de l'enclos correspondent-ils au PROFIL du mob ? */
     private static int habitatScore(ServerLevel level, LivingEntity mob, ZooZone zone) {
         HabitatProfile profile = HabitatManager.profileOf(mob);
 
         if (profile == HabitatProfile.AUTO) {
-            // Regle generique historique : eau pour aquatiques, vegetation sinon
             HabitatCache cache = getHabitat(level, zone);
             boolean isAquatic = mob instanceof WaterAnimal;
             boolean isFireImmune = mob.fireImmune();
@@ -101,15 +97,13 @@ public class WelfareCalculator {
             return cache.hasVegetation() ? 25 : 10;
         }
 
-        // Profil explicite : on echantillonne l'enclos et on compte les blocs qui matchent
         double ratio = profileMatchRatio(level, zone, profile);
-        if (ratio >= 0.25) return 25;         // un quart de l'enclos correspond = parfait
+        if (ratio >= 0.25) return 25;
         if (ratio >= 0.10) return 15;
         if (ratio > 0) return 8;
         return 3;
     }
 
-    /** Part (0..1) des colonnes echantillonnees contenant un bloc du profil. */
     private static double profileMatchRatio(ServerLevel level, ZooZone zone, HabitatProfile profile) {
         int step = Math.max(1, zone.size() / 128);
         int i = 0, sampled = 0, matched = 0;
@@ -118,7 +112,7 @@ public class WelfareCalculator {
             sampled++;
             BlockPos floor = BlockPos.of(packed);
             for (int dy = 0; dy <= 2; dy++) {
-                if (profile.matches(level.getBlockState(floor.above(dy))) 
+                if (profile.matches(level.getBlockState(floor.above(dy)))
                         || (dy == 0 && profile.matches(level.getBlockState(floor)))) {
                     matched++;
                     break;
@@ -130,9 +124,6 @@ public class WelfareCalculator {
 
     /** NOURRITURE (0-20) : une Mangeoire non vide a portee du mob. */
     private static int foodScore(ServerLevel level, LivingEntity mob, ZooZone zone) {
-        // Cherche une mangeoire du bon regime dans l'enclos. On scanne UNIQUEMENT
-        // la surface (colonnes du sol +/- 3), pas tout le volume de 40 blocs de
-        // haut (sinon le serveur gele sur un grand enclos).
         for (long packed : zone.floorColumns()) {
             BlockPos floor = BlockPos.of(packed);
             for (int dy = -2; dy <= 3; dy++) {
@@ -147,10 +138,18 @@ public class WelfareCalculator {
         return 0;
     }
 
-    /** COMPAGNIE (0-15) : au moins un congenere (meme type) dans l'enclos. */
+    /**
+     * COMPAGNIE (0-15) : au moins un congenere (meme type) dans l'enclos.
+     *
+     * Utilise zone.boundingBox() et non getBoundingBox().inflate(N) : dans un
+     * grand enclos (> 24 blocs), deux individus aux coins opposes etaient hors
+     * du rayon d'inflate et ne se "voyaient" jamais -> score compagnie = 0
+     * meme s'ils cohabitent bien. Le filtre zone.contains() garantit qu'on
+     * n'inclut pas les animaux de dehors.
+     */
     private static int companyScore(ServerLevel level, LivingEntity mob, ZooZone zone) {
         List<Animal> nearby = level.getEntitiesOfClass(Animal.class,
-                mob.getBoundingBox().inflate(zone.size() > 64 ? 24 : 12),
+                zone.boundingBox(),
                 a -> a != mob && a.getType() == mob.getType() && zone.contains(a.blockPosition()));
         return nearby.isEmpty() ? 0 : 15;
     }
@@ -165,7 +164,6 @@ public class WelfareCalculator {
     }
 
     private static int countAnimalsInZone(ServerLevel level, ZooZone zone) {
-        // Meme filtre que le diagnostic : apprivoises et vivants uniquement
         return level.getEntitiesOfClass(Animal.class, zone.boundingBox(),
                 a -> a.isAlive() && zone.contains(a.blockPosition())
                         && a.getCapability(CapabilityHandler.TAMING_DATA)
@@ -179,7 +177,6 @@ public class WelfareCalculator {
             return cached;
         }
         boolean water = false, veg = false, lava = false;
-        // On echantillonne les colonnes de sol (pas toutes si enorme, 1 sur N)
         int step = Math.max(1, zone.size() / 256);
         int i = 0;
         for (long packed : zone.floorColumnsRaw()) {
