@@ -1,1 +1,53 @@
-cGFja2FnZSBjb20ubGV4M2QudWx0aW1hdGV6b290YW1pbmcuY29uZmlnOwoKaW1wb3J0IG5ldC5taW5lY3JhZnRmb3JnZS5jb21tb24uRm9yZ2VDb25maWdTcGVjOwoKaW1wb3J0IGphdmEudXRpbC5BcnJheUxpc3Q7CmltcG9ydCBqYXZhLnV0aWwuTGlzdDsKCi8qKgogKiBDb25maWcgVE9NTCBjbGllbnQgOiB1bHRpbWF0ZXpvb3RhbWUtY2xpZW50LnRvbWwKICogQ29udGllbnQgbGEgbGlzdGUgZGVzIG1vZElkcyBjb2NoZXMgZGFucyBsZSBDb25maWdNb2RTY3JlZW4gKGxhICJGb3JjZWQgTGlzdCIpLgogKiBVbiBtb2QgZGFucyBjZXR0ZSBsaXN0ZSBlc3QgdHJhaXRlIHBhciBsZSBzeXN0ZW1lIGRlIENyb3F1ZXR0ZXMgbWVtZSBzJ2lsIGEKICogZGVqYSBzb24gcHJvcHJlIHN5c3RlbWUgZGUgdGFtaW5nIG5hdGlmIChleCA6IFBvbGx5J3MgUGV0cykuCiAqLwpwdWJsaWMgY2xhc3MgWm9vQ2xpZW50Q29uZmlnIHsKCiAgICBwdWJsaWMgc3RhdGljIGZpbmFsIEZvcmdlQ29uZmlnU3BlYyBTUEVDOwoKICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgRm9yZ2VDb25maWdTcGVjLkNvbmZpZ1ZhbHVlPExpc3Q8PyBleHRlbmRzIFN0cmluZz4+IEZPUkNFRF9NT0RfSURTOwogICAgcHVibGljIHN0YXRpYyBmaW5hbCBGb3JnZUNvbmZpZ1NwZWMuRG91YmxlVmFsdWUgR0xPQkFMX1JOR19NVUxUSVBMSUVSOwogICAgcHVibGljIHN0YXRpYyBmaW5hbCBGb3JnZUNvbmZpZ1NwZWMuQm9vbGVhblZhbHVlIFNIT1dfSE9MT19CQURHRTsKICAgIC8qKiBBZmZpY2hlciBsYSB0YWNoZSBlbiBjb3VycyBhdS1kZXNzdXMgZGVzIGVtcGxveWVzLiAqLwogICAgcHVibGljIHN0YXRpYyBmaW5hbCBGb3JnZUNvbmZpZ1NwZWMuQm9vbGVhblZhbHVlIFNIT1dfS0VFUEVSX1RBU0s7CgogICAgc3RhdGljIHsKICAgICAgICBGb3JnZUNvbmZpZ1NwZWMuQnVpbGRlciBidWlsZGVyID0gbmV3IEZvcmdlQ29uZmlnU3BlYy5CdWlsZGVyKCk7CgogICAgICAgIGJ1aWxkZXIuY29tbWVudCgiVWx0aW1hdGUgWm9vIFRhbWluZyAtIENvbmZpZ3VyYXRpb24gQ2xpZW50IikKICAgICAgICAgICAgICAgIC5wdXNoKCJnZW5lcmFsIik7CgogICAgICAgIEZPUkNFRF9NT0RfSURTID0gYnVpbGRlcgogICAgICAgICAgICAgICAgLmNvbW1lbnQoCiAgICAgICAgICAgICAgICAgICAgICAgICJMaXN0ZSBkZXMgbW9kSWRzIGRvbnQgVE9VUyBsZXMgbW9icyBkb2l2ZW50IHBhc3NlciBwYXIgbGUgc3lzdGVtZSBkZSIsCiAgICAgICAgICAgICAgICAgICAgICAgICJDcm9xdWV0dGVzICsgUk5HLCBtZW1lIHNpIGNlIG1vZCBhIGRlamEgc29uIHByb3ByZSBzeXN0ZW1lIGRlIHRhbWluZy4iLAogICAgICAgICAgICAgICAgICAgICAgICAiTW9kaWZpYWJsZSB2aWEgbGUgYm91dG9uICdDb25maWd1cmVyJyBkYW5zIGxhIGxpc3RlIGRlcyBtb2RzIChDb25maWdNb2RTY3JlZW4pLiIKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIC5kZWZpbmVMaXN0KCJmb3JjZWRNb2RJZHMiLCBuZXcgQXJyYXlMaXN0PFN0cmluZz4oKSwgb2JqIC0+IG9iaiBpbnN0YW5jZW9mIFN0cmluZyk7CgogICAgICAgIEdMT0JBTF9STkdfTVVMVElQTElFUiA9IGJ1aWxkZXIKICAgICAgICAgICAgICAgIC5jb21tZW50KCJNdWx0aXBsaWNhdGV1ciBnbG9iYWwgYXBwbGlxdWUgYSB0b3V0ZXMgbGVzIGNoYW5jZXMgZGUgY2FwdHVyZS90YW1pbmcuIikKICAgICAgICAgICAgICAgIC5kZWZpbmVJblJhbmdlKCJnbG9iYWxSbmdNdWx0aXBsaWVyIiwgMS4wLCAwLjEsIDUuMCk7CgogICAgICAgIFNIT1dfSE9MT19CQURHRT0gYnVpbGRlcgogICAgICAgICAgICAgICAgLmNvbW1lbnQoIkFmZmljaGVyIGxlIEhvbG8tQmFkZ2UgYXUtZGVzc3VzIGRlcyBmYW1pbGllcnMgcXVhbmQgbGUgU2lmZmxldCBlc3QgZW4gbWFpbi4iKQogICAgICAgICAgICAgICAgLmRlZmluZSgic2hvd0hvbG9CYWRnZSIsIHRydWUpOwogICAgICAgIFNIT1dfS0VFUEVSX1RBU0sgPSBidWlsZGVyCiAgICAgICAgICAgICAgICAuY29tbWVudCgiQWZmaWNoZXIgYXUtZGVzc3VzIGRlIGNoYXF1ZSBlbXBsb3llIGxhIHRhY2hlIHF1J2lsIGV4ZWN1dGUuIikKICAgICAgICAgICAgICAgIC5kZWZpbmUoInNob3dLZWVwZXJUYXNrIiwgdHJ1ZSk7CgogICAgICAgIGJ1aWxkZXIucG9wKCk7CgogICAgICAgIFNQRUMgPSBidWlsZGVyLmJ1aWxkKCk7CiAgICB9Cn0K
+package com.lex3d.ultimatezootaming.config;
+
+import net.minecraftforge.common.ForgeConfigSpec;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Config TOML client : ultimatezootame-client.toml
+ * Contient la liste des modIds coches dans le ConfigModScreen (la "Forced List").
+ * Un mod dans cette liste est traite par le systeme de Croquettes meme s'il a
+ * deja son propre systeme de taming natif (ex : Polly's Pets).
+ */
+public class ZooClientConfig {
+
+    public static final ForgeConfigSpec SPEC;
+
+    public static final ForgeConfigSpec.ConfigValue<List<? extends String>> FORCED_MOD_IDS;
+    public static final ForgeConfigSpec.DoubleValue GLOBAL_RNG_MULTIPLIER;
+    public static final ForgeConfigSpec.BooleanValue SHOW_HOLO_BADGE;
+    /** Afficher la tache en cours au-dessus des employes. */
+    public static final ForgeConfigSpec.BooleanValue SHOW_KEEPER_TASK;
+
+    static {
+        ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
+
+        builder.comment("Ultimate Zoo Taming - Configuration Client")
+                .push("general");
+
+        FORCED_MOD_IDS = builder
+                .comment(
+                        "Liste des modIds dont TOUS les mobs doivent passer par le systeme de",
+                        "Croquettes + RNG, meme si ce mod a deja son propre systeme de taming.",
+                        "Modifiable via le bouton 'Configurer' dans la liste des mods (ConfigModScreen)."
+                )
+                .defineList("forcedModIds", new ArrayList<String>(), obj -> obj instanceof String);
+
+        GLOBAL_RNG_MULTIPLIER = builder
+                .comment("Multiplicateur global applique a toutes les chances de capture/taming.")
+                .defineInRange("globalRngMultiplier", 1.0, 0.1, 5.0);
+
+        SHOW_HOLO_BADGE = builder
+                .comment("Afficher le Holo-Badge au-dessus des familiers quand le Sifflet est en main.")
+                .define("showHoloBadge", true);
+
+        SHOW_KEEPER_TASK = builder
+                .comment("Afficher au-dessus de chaque employe la tache qu'il execute.")
+                .define("showKeeperTask", true);
+
+        builder.pop();
+        SPEC = builder.build();
+    }
+}

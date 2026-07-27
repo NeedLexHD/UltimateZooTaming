@@ -1,3 +1,59 @@
-cGFja2FnZSBjb20ubGV4M2QudWx0aW1hdGV6b290YW1pbmcuY2xpZW50LnJlbmRlcjsKCmltcG9ydCBjb20ubGV4M2QudWx0aW1hdGV6b290YW1pbmcuZW50aXRpZXMuS2VlcGVyVGFzazsKaW1wb3J0IGNvbS5sZXgzZC51bHRpbWF0ZXpvb3RhbWluZy5lbnRpdGllcy5ab29LZWVwZXJFbnRpdHk7CmltcG9ydCBjb20ubW9qYW5nLmJsYXplM2QudmVydGV4LlBvc2VTdGFjazsKaW1wb3J0IG5ldC5taW5lY3JhZnQuY2xpZW50Lk1pbmVjcmFmdDsKaW1wb3J0IG5ldC5taW5lY3JhZnQuY2xpZW50Lmd1aS5Gb250OwppbXBvcnQgbmV0Lm1pbmVjcmFmdC5jbGllbnQucmVuZGVyZXIuTXVsdGlCdWZmZXJTb3VyY2U7CmltcG9ydCBuZXQubWluZWNyYWZ0Lm5ldHdvcmsuY2hhdC5Db21wb25lbnQ7CmltcG9ydCBzb2Z0d2FyZS5iZXJuaWUuZ2Vja29saWIuY2FjaGUub2JqZWN0LkJha2VkR2VvTW9kZWw7CmltcG9ydCBzb2Z0d2FyZS5iZXJuaWUuZ2Vja29saWIucmVuZGVyZXIuR2VvUmVuZGVyZXI7CmltcG9ydCBzb2Z0d2FyZS5iZXJuaWUuZ2Vja29saWIucmVuZGVyZXIubGF5ZXIuR2VvUmVuZGVyTGF5ZXI7CgovKioKICogQWZmaWNoZSBBVS1ERVNTVVMGREVMQSBURVJFIGNLIHF1ZSBsJ2VtcGxveWUgZXN0IGVuIHRyYWluIGRlIGZhaXJlLgogKgogKiBWaXNpYmxlIHNldWxlbWVudCBkZSBwcmVzICg4IGJsb2NzKSBwb3VyIG5lIHBhcyBlbmNvbWJyZXIgbGEgdnVlIGQnZW5zZW1ibGUKICogZHUgcGFyYywgZXQgbWFzcXVlIHF1YW5kIGlsIG5lIGZhaXQgcmllbiBkZSBub3RhYmxlLgogKi8KcHVibGljIGNsYXNzIEtlZXBlclRhc2tMYXllciBleHRlbmRzIEdlb1JlbmRlckxheWVyPFpvb0tlZXBlckVudGl0eT4gewoKICAgIC8qKiBEaXN0YW5jZSBtYXhpbWFsZSBkJ2FmZmljaGFnZSwgYXUgY2FycmUuICovCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBkb3VibGUgVklFV19ESVNUID0gOC4wICogOC4wOwoKICAgIHB1YmxpYyBLZWVwZXJUYXNrTGF5ZXIoR2VvUmVuZGVyZXI8Wm9vS2VlcGVyRW50aXR5PiByZW5kZXJlcikgewogICAgICAgIHN1cGVyKHJlbmRlcmVyKTsKICAgIH0KCiAgICBAT3ZlcnJpZGUKICAgIHB1YmxpYyB2b2lkIHJlbmRlckZvckVudGl0eShzb2Z0d2FyZS5iZXJuaWUuZ2Vja29saWIubW9kZWwuR2VvTW9kZWw8Wm9vS2VlcGVyRW50aXR5PiBtb2RlbCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgWm9vS2VlcGVyRW50aXR5IGtlZXBlciwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmFrZWRHZW9Nb2RlbCBiYWtlZE1vZGVsLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQb3NlU3RhY2sgcG9zZVN0YWNrLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNdWx0aUJ1ZmZlclNvdXJjZSBidWZmZXJTb3VyY2UsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGludCBwYWNrZWRMaWdodCkgewogICAgICAgIGlmICghY29tLmxleDNkLnVsdGltYXRlem9vdGFtaW5nLmNvbmZpZy5ab29DbGllbnRDb25maWcuU0hPV19LRUVQRVJFX1RBU0suZ2V0KCkpIHJldHVybjsKCiAgICAgICAgS2VlcGVyVGFzayB0YXNrID0ga2VlcGVyLmdldFRhc2soKTsKICAgICAgICBpZiAodGFzayA9PSBLZWVwZXJUYXNrLklETEUpIHJldHVybjsKICAgICAgICBpZiAoa2VlcGVyLmlzU2xlZXBpbmcoKSkgcmV0dXJuOwoKICAgICAgICBNaW5lY3JhZnQgbWMgPSBNaW5lY3JhZnQuZ2V0SW5zdGFuY2UoKTsKICAgICAgICBpZiAobWMucGxheWVyID09IG51bGwgfHwgbWMucGxheWVyLmRpc3RhbmNlVG9TcXIoa2VlcGVyKSA+IFZJRVXEX0RJU1QpIHJldHVybjsKCiAgICAgICAgRm9udCBmb250ID0gbWMuZm9udDsKICAgICAgICBDb21wb25lbnQgbGFiZWwgPSBDb21wb25lbnQubGl0ZXJhbCh0YXNrLmljb24gKyAiICIpCiAgICAgICAgICAgICAgICAuYXBwZW5kKENvbXBvbmVudC50cmFuc2xhdGFibGUodGFzay50cmFuc2xhdGlvbktleSgpKSk7CiAgICAgICAgZmxvYXQgd2lkdGggPSBmb250LndpZHRoKGxhYmVsKSAvIDJmOwoKICAgICAgICBwb3NlU3RhY2sucHVzaFBvc2UoKTsKICAgICAgICBwb3NlU3RhY2sudHJhbnNsYXRlKDAsIGtlZXBlci5nZXRCYkhlaWdodCgpICsgMC41NSwgMCk7CiAgICAgICAgcG9zZVN0YWNrLm11bFBvc2UobWMuZ2V0RW50aXR5UmVuZGVyRGlzcGF0Y2hlcigpLmNhbWVyYU9yaWVudGF0aW9uKCkpOwogICAgICAgIHBvc2VTdGFjay5zY2FsZSgtMC4wMjJmLCAtMC4wMjJmLCAwLjAyMmYpOwoKICAgICAgICBpbnQgYmcgPSAoaW50KSAobWMub3B0aW9ucy5nZXRCYWNrZ3JvdW5kT3BhY2l0eSgwLjI1ZikgKiAyNTVmKSA8PCAyNDsKICAgICAgICBmb250LmRyYXdJbkJhdGNoKGxhYmVsLCAtd2lkdGgsIDAsIDB4RkZGRkZGLCBmYWxzZSwgcG9zZVN0YWNrLmxhc3QoKS5wb3NlKCksCiAgICAgICAgICAgICAgICBidWZmZXJTb3VyY2UsIEZvbnQuRGlzcGxheU1vZGUuTk9STUFMLCB
+package com.lex3d.ultimatezootaming.client.render;
 
-bg, IHBhY2tlZExpZ2h0KTsKICAgICAgICBwb3NlU3RhY2sucG9wUG9zZSgpOwogICAgfQp9Cg==
+import com.lex3d.ultimatezootaming.entities.KeeperTask;
+import com.lex3d.ultimatezootaming.entities.ZooKeeperEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Font;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.network.chat.Component;
+import software.bernie.geckolib.cache.object.BakedGeoModel;
+import software.bernie.geckolib.renderer.GeoRenderer;
+import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
+
+/**
+ * Affiche AU-DESSUS DE LA TETE ce que l'employe est en train de faire.
+ *
+ * Visible seulement de pres (8 blocs) pour ne pas encombrer la vue d'ensemble
+ * du parc, et masque quand il ne fait rien de notable.
+ */
+public class KeeperTaskLayer extends GeoRenderLayer<ZooKeeperEntity> {
+
+    /** Distance maximale d'affichage, au carre. */
+    private static final double VIEW_DIST = 8.0 * 8.0;
+
+    public KeeperTaskLayer(GeoRenderer<ZooKeeperEntity> renderer) {
+        super(renderer);
+    }
+
+    public void render(PoseStack pose, ZooKeeperEntity keeper, BakedGeoModel model,
+                       net.minecraft.client.renderer.RenderType renderType,
+                       MultiBufferSource buffer,
+                       net.minecraft.client.renderer.texture.OverlayTexture overlay,
+                       float partialTick, int packedLight, int packedOverlay) {
+
+        if (!com.lex3d.ultimatezootaming.config.ZooClientConfig.SHOW_KEEPER_TASK.get()) return;
+
+        KeeperTask task = keeper.getTask();
+        if (task == KeeperTask.IDLE) return;
+        if (keeper.isSleeping()) return;
+
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.player == null || mc.player.distanceToSqr(keeper) > VIEW_DIST) return;
+
+        Font font = mc.font;
+        Component label = Component.literal(task.icon + " ")
+                .append(Component.translatable(task.translationKey()));
+        float width = font.width(label) / 2f;
+
+        pose.pushPose();
+        pose.translate(0, keeper.getBbHeight() + 0.55, 0);
+        pose.mulPose(mc.getEntityRenderDispatcher().cameraOrientation());
+        pose.scale(-0.022f, -0.022f, 0.022f);
+
+        int bg = (int) (mc.options.getBackgroundOpacity(0.25f) * 255f) << 24;
+        font.drawInBatch(label, -width, 0, 0xFFFFFF, false, pose.last().pose(),
+                buffer, Font.DisplayMode.NORMAL, bg, packedLight);
+        pose.popPose();
+    }
+}
