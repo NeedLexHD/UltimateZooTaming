@@ -1,0 +1,76 @@
+{
+ "variants": {
+  "food_type=0,level=0,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=0,level=0,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=1,level=0,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=1,level=0,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=2,level=0,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=2,level=0,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=3,level=0,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=3,level=0,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=0,level=1,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=0,level=1,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=1,level=1,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=1,level=1,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=2,level=1,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=2,level=1,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=3,level=1,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=3,level=1,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=0,level=2,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=0,level=2,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=1,level=2,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=1,level=2,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=2,level=2,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=2,level=2,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=3,level=2,waterlogged=false": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  },
+  "food_type=3,level=2,waterlogged=true": {
+   "model": "ultimatezootaming:block/feeder_empty_sandstone"
+  }
+ }
+}

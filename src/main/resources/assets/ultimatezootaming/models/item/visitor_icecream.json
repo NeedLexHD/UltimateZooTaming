@@ -1,0 +1,24 @@
+{
+  "textures": {"0":"ultimatezootaming:item/visitor_icecream","particle":"ultimatezootaming:item/visitor_icecream"},
+  "elements": [
+    {"name":"cornet","from":[7,0,7],"to":[9,5,9],
+     "faces":{
+       "north":{"uv":[0,8,2,13],"texture":"#0"},"south":{"uv":[0,8,2,13],"texture":"#0"},
+       "east":{"uv":[0,8,2,13],"texture":"#0"},"west":{"uv":[0,8,2,13],"texture":"#0"}}},
+    {"name":"boule1","from":[6,5,6],"to":[10,9,10],
+     "faces":{
+       "north":{"uv":[0,0,4,4],"texture":"#0"},"south":{"uv":[0,0,4,4],"texture":"#0"},
+       "east":{"uv":[0,0,4,4],"texture":"#0"},"west":{"uv":[0,0,4,4],"texture":"#0"},
+       "up":{"uv":[0,0,4,4],"texture":"#0"},"down":{"uv":[4,0,8,4],"texture":"#0"}}},
+    {"name":"boule2","from":[6.5,8,6.5],"to":[9.5,11,9.5],
+     "faces":{
+       "north":{"uv":[4,4,7,7],"texture":"#0"},"south":{"uv":[4,4,7,7],"texture":"#0"},
+       "east":{"uv":[4,4,7,7],"texture":"#0"},"west":{"uv":[4,4,7,7],"texture":"#0"},
+       "up":{"uv":[4,4,7,7],"texture":"#0"}}}
+  ],
+  "display":{
+    "thirdperson_righthand":{"rotation":[0,0,0],"translation":[0,1.5,0],"scale":[0.6,0.6,0.6]},
+    "gui":{"rotation":[15,-20,0],"scale":[1,1,1]},
+    "ground":{"scale":[0.5,0.5,0.5]},"fixed":{"scale":[0.8,0.8,0.8]}
+  }
+}

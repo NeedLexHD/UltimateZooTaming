@@ -1,0 +1,17 @@
+{
+  "parent": "ultimatezootaming:block/zoo_bench",
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    }
+  }
+}

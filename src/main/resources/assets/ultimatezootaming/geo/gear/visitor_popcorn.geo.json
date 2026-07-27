@@ -1,0 +1,90 @@
+{
+ "format_version": "1.12.0",
+ "minecraft:geometry": [
+  {
+   "description": {
+    "identifier": "geometry.visitor_popcorn",
+    "texture_width": 32,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 2,
+    "visible_bounds_offset": [
+     0,
+     0.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -3,
+        0,
+        -3
+       ],
+       "size": [
+        6,
+        8,
+        6
+       ],
+       "uv": [
+        0,
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "kernels",
+     "pivot": [
+      0,
+      8,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -2.5,
+        8,
+        -2.5
+       ],
+       "size": [
+        5,
+        2,
+        5
+       ],
+       "uv": [
+        0,
+        15
+       ]
+      },
+      {
+       "origin": [
+        -1.5,
+        10,
+        -1.5
+       ],
+       "size": [
+        3,
+        1.5,
+        3
+       ],
+       "uv": [
+        0,
+        23
+       ]
+      }
+     ],
+     "parent": "root"
+    }
+   ]
+  }
+ ]
+}

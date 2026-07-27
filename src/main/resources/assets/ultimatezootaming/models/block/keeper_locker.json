@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "ultimatezootaming:block/keeper_locker_top",
+    "front": "ultimatezootaming:block/keeper_locker_front",
+    "side": "ultimatezootaming:block/keeper_locker_side"
+  }
+}

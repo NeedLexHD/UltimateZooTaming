@@ -1,0 +1,345 @@
+{
+ "parent": "block/block",
+ "textures": {
+  "metal": "ultimatezootaming:block/water_jet",
+  "particle": "ultimatezootaming:block/water_jet"
+ },
+ "elements": [
+  {
+   "name": "base",
+   "from": [
+    5,
+    0,
+    5
+   ],
+   "to": [
+    11,
+    1,
+    11
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      4,
+      14,
+      10,
+      15
+     ],
+     "texture": "#metal"
+    },
+    "south": {
+     "uv": [
+      4,
+      14,
+      10,
+      15
+     ],
+     "texture": "#metal"
+    },
+    "east": {
+     "uv": [
+      4,
+      14,
+      10,
+      15
+     ],
+     "texture": "#metal"
+    },
+    "west": {
+     "uv": [
+      4,
+      14,
+      10,
+      15
+     ],
+     "texture": "#metal"
+    },
+    "up": {
+     "uv": [
+      4,
+      4,
+      10,
+      10
+     ],
+     "texture": "#metal"
+    },
+    "down": {
+     "uv": [
+      4,
+      4,
+      10,
+      10
+     ],
+     "texture": "#metal"
+    }
+   }
+  },
+  {
+   "name": "poteau",
+   "from": [
+    7,
+    1,
+    7
+   ],
+   "to": [
+    9,
+    8,
+    9
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      6,
+      6,
+      8,
+      13
+     ],
+     "texture": "#metal"
+    },
+    "south": {
+     "uv": [
+      6,
+      6,
+      8,
+      13
+     ],
+     "texture": "#metal"
+    },
+    "east": {
+     "uv": [
+      6,
+      6,
+      8,
+      13
+     ],
+     "texture": "#metal"
+    },
+    "west": {
+     "uv": [
+      6,
+      6,
+      8,
+      13
+     ],
+     "texture": "#metal"
+    },
+    "up": {
+     "uv": [
+      6,
+      6,
+      8,
+      8
+     ],
+     "texture": "#metal"
+    }
+   }
+  },
+  {
+   "name": "corps_canon",
+   "from": [
+    6,
+    7,
+    6
+   ],
+   "to": [
+    10,
+    11,
+    10
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      5,
+      5,
+      9,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "south": {
+     "uv": [
+      5,
+      5,
+      9,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "east": {
+     "uv": [
+      5,
+      5,
+      9,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "west": {
+     "uv": [
+      5,
+      5,
+      9,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "up": {
+     "uv": [
+      5,
+      5,
+      9,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "down": {
+     "uv": [
+      5,
+      5,
+      9,
+      9
+     ],
+     "texture": "#metal"
+    }
+   }
+  },
+  {
+   "name": "tube_canon",
+   "from": [
+    7,
+    8,
+    10
+   ],
+   "to": [
+    9,
+    10,
+    16
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      7,
+      7,
+      9,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "south": {
+     "uv": [
+      7,
+      7,
+      9,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "east": {
+     "uv": [
+      10,
+      7,
+      16,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "west": {
+     "uv": [
+      10,
+      7,
+      16,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "up": {
+     "uv": [
+      10,
+      7,
+      16,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "down": {
+     "uv": [
+      10,
+      7,
+      16,
+      9
+     ],
+     "texture": "#metal"
+    }
+   }
+  },
+  {
+   "name": "buse",
+   "from": [
+    6.5,
+    7.5,
+    15
+   ],
+   "to": [
+    9.5,
+    10.5,
+    16.5
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      6,
+      6,
+      9,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "south": {
+     "uv": [
+      6,
+      6,
+      9,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "east": {
+     "uv": [
+      9,
+      6,
+      10,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "west": {
+     "uv": [
+      9,
+      6,
+      10,
+      9
+     ],
+     "texture": "#metal"
+    },
+    "up": {
+     "uv": [
+      6,
+      6,
+      9,
+      7
+     ],
+     "texture": "#metal"
+    },
+    "down": {
+     "uv": [
+      6,
+      6,
+      9,
+      7
+     ],
+     "texture": "#metal"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "waterlogged=false,baited=false": { "model": "ultimatezootaming:block/net_reinforced" },
+    "waterlogged=false,baited=true":  { "model": "ultimatezootaming:block/net_reinforced_baited" },
+    "waterlogged=true,baited=false":  { "model": "ultimatezootaming:block/net_reinforced" },
+    "waterlogged=true,baited=true":   { "model": "ultimatezootaming:block/net_reinforced_baited" }
+  }
+}

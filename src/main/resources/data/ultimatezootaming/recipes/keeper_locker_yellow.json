@@ -1,0 +1,14 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "ingredients": [
+  {
+   "item": "ultimatezootaming:keeper_locker"
+  },
+  {
+   "item": "minecraft:yellow_dye"
+  }
+ ],
+ "result": {
+  "item": "ultimatezootaming:keeper_locker_yellow"
+ }
+}

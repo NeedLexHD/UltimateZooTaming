@@ -1,0 +1,47 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.zoo_badge.idle": {
+   "loop": true,
+   "animation_length": 3,
+   "bones": {
+    "emblem": {
+     "position": {
+      "0": [
+       0,
+       0,
+       0
+      ],
+      "1.5": [
+       0,
+       0,
+       -0.15
+      ],
+      "3": [
+       0,
+       0,
+       0
+      ]
+     },
+     "rotation": {
+      "0": [
+       0,
+       -3,
+       0
+      ],
+      "1.5": [
+       0,
+       3,
+       0
+      ],
+      "3": [
+       0,
+       -3,
+       0
+      ]
+     }
+    }
+   }
+  }
+ }
+}

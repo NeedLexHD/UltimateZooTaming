@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+issueTrackerURL="https://github.com/lex3d/ultimatezootaming/issues"
+
+[[mods]]
+modId="ultimatezootaming"
+version="${file.jarVersion}"
+displayName="Ultimate Zoo Taming"
+#logoFile="logo.png"
+credits="Lex3D"
+authors="Lex3D"
+description='''
+Systeme de Zoo unifie : croquettes + RNG, sifflet de dompteur, cages de capture,
+canne a peche/filets, GUI de config des mods forces, et maternite asynchrone.
+Compatible en douceur avec les mods de taming existants (Alex's Mobs, Polly's Pets, etc).
+'''
+
+[[dependencies.ultimatezootaming]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.ultimatezootaming]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.ultimatezootaming]]
+    modId="geckolib"
+    mandatory=true
+    versionRange="[4.4,)"
+    ordering="AFTER"
+    side="BOTH"

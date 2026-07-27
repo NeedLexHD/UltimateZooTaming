@@ -1,0 +1,28 @@
+{
+ "variants": {
+  "facing=north,half=lower": {
+   "model": "ultimatezootaming:block/keeper_locker_empty"
+  },
+  "facing=south,half=lower": {
+   "model": "ultimatezootaming:block/keeper_locker_empty"
+  },
+  "facing=east,half=lower": {
+   "model": "ultimatezootaming:block/keeper_locker_empty"
+  },
+  "facing=west,half=lower": {
+   "model": "ultimatezootaming:block/keeper_locker_empty"
+  },
+  "facing=north,half=upper": {
+   "model": "ultimatezootaming:block/keeper_locker_empty"
+  },
+  "facing=south,half=upper": {
+   "model": "ultimatezootaming:block/keeper_locker_empty"
+  },
+  "facing=east,half=upper": {
+   "model": "ultimatezootaming:block/keeper_locker_empty"
+  },
+  "facing=west,half=upper": {
+   "model": "ultimatezootaming:block/keeper_locker_empty"
+  }
+ }
+}

@@ -1,0 +1,38 @@
+{
+  "cage_slam": {
+    "subtitle": "subtitle.ultimatezootaming.cage_slam",
+    "sounds": [
+      "ultimatezootaming:cage_slam"
+    ]
+  },
+  "cage_fail": {
+    "subtitle": "subtitle.ultimatezootaming.cage_fail",
+    "sounds": [
+      "ultimatezootaming:cage_fail"
+    ]
+  },
+  "cage_success": {
+    "subtitle": "subtitle.ultimatezootaming.cage_success",
+    "sounds": [
+      "ultimatezootaming:cage_success"
+    ]
+  },
+  "whistle_blow": {
+    "subtitle": "subtitle.ultimatezootaming.whistle_blow",
+    "sounds": [
+      "ultimatezootaming:whistle_blow"
+    ]
+  },
+  "tame_success": {
+    "subtitle": "subtitle.ultimatezootaming.tame_success",
+    "sounds": [
+      "ultimatezootaming:tame_success"
+    ]
+  },
+  "tame_fail": {
+    "subtitle": "subtitle.ultimatezootaming.tame_fail",
+    "sounds": [
+      "ultimatezootaming:tame_fail"
+    ]
+  }
+}

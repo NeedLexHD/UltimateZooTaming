@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.incubator.idle": {
+      "loop": true,
+      "animation_length": 4,
+      "bones": {
+        "egg": {
+          "position": { "0": [0, 0, 0], "2": [0, 0.2, 0], "4": [0, 0, 0] }
+        }
+      }
+    },
+    "animation.incubator.work": {
+      "loop": true,
+      "animation_length": 2,
+      "bones": {
+        "egg": {
+          "rotation": { "0": [0, 0, 0], "0.5": [3, 90, -3], "1": [0, 180, 0], "1.5": [-3, 270, 3], "2": [0, 360, 0] },
+          "position": { "0": [0, 0, 0], "1": [0, 0.6, 0], "2": [0, 0, 0] }
+        },
+        "dome": {
+          "scale": { "0": [1, 1, 1], "1": [1.04, 1.02, 1.04], "2": [1, 1, 1] }
+        },
+        "cap": {
+          "position": { "0": [0, 0, 0], "1": [0, 0.3, 0], "2": [0, 0, 0] }
+        }
+      }
+    }
+  }
+}

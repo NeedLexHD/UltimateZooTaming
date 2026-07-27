@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "ultimatezootaming:block/zoo_entrance_top",
+    "bottom": "ultimatezootaming:block/zoo_entrance_top",
+    "side": "ultimatezootaming:block/zoo_entrance_front",
+    "particle": "ultimatezootaming:block/zoo_entrance_side"
+  }
+}

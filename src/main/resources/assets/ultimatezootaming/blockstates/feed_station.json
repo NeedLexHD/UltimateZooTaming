@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "ultimatezootaming:block/feed_station"
+  },
+  "facing=east": {
+   "model": "ultimatezootaming:block/feed_station",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "ultimatezootaming:block/feed_station",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "ultimatezootaming:block/feed_station",
+   "y": 270
+  }
+ }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "ultimatezootaming:net_reinforced" },
+    { "item": "minecraft:iron_ingot" },
+    { "item": "minecraft:iron_ingot" },
+    { "item": "minecraft:iron_ingot" }
+  ],
+  "result": { "item": "ultimatezootaming:net_pool", "count": 1 }
+}

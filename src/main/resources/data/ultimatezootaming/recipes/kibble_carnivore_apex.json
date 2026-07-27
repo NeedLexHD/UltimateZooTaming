@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "minecraft:rotten_flesh" },
+    { "item": "minecraft:rotten_flesh" },
+    { "item": "minecraft:gold_nugget" },
+    { "item": "minecraft:bone_meal" }
+  ],
+  "result": { "item": "ultimatezootaming:kibble_carnivore_apex", "count": 2 }
+}

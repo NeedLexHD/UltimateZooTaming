@@ -1,0 +1,13 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.zoo_bench.idle": {
+   "loop": true,
+   "animation_length": 2.0
+  },
+  "animation.zoo_bench.use": {
+   "loop": false,
+   "animation_length": 0.3
+  }
+ }
+}

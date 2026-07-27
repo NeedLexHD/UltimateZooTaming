@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "ultimatezootaming:trapping_cage_medium" },
+    { "item": "minecraft:iron_ingot" },
+    { "item": "minecraft:iron_ingot" },
+    { "item": "minecraft:iron_ingot" },
+    { "item": "minecraft:iron_ingot" },
+    { "item": "minecraft:gold_ingot" },
+    { "item": "minecraft:gold_ingot" }
+  ],
+  "result": { "item": "ultimatezootaming:trapping_cage_large", "count": 1 }
+}

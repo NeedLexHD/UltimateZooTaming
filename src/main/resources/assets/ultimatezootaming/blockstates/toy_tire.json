@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "ultimatezootaming:block/toy_tire"
+  },
+  "facing=south": {
+   "model": "ultimatezootaming:block/toy_tire",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "ultimatezootaming:block/toy_tire",
+   "y": 270
+  },
+  "facing=east": {
+   "model": "ultimatezootaming:block/toy_tire",
+   "y": 90
+  }
+ }
+}

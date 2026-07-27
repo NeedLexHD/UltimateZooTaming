@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EWE",
+    "PPP",
+    "P P"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "W": {
+      "item": "minecraft:lime_wool"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "ultimatezootaming:zoo_entrance"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "D  "
+  ],
+  "key": {
+    "L": {
+      "tag": "minecraft:wool"
+    },
+    "D": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "result": {
+    "item": "ultimatezootaming:zoo_cap",
+    "count": 2
+  }
+}

@@ -1,0 +1,55 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.zoo_sign.idle": {
+   "loop": true,
+   "animation_length": 4.0,
+   "bones": {
+    "board": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "2.0": [
+       0,
+       0,
+       1.5
+      ],
+      "4.0": [
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   }
+  },
+  "animation.zoo_sign.use": {
+   "loop": false,
+   "animation_length": 0.5,
+   "bones": {
+    "board": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "0.2": [
+       6,
+       0,
+       0
+      ],
+      "0.5": [
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   }
+  }
+ }
+}

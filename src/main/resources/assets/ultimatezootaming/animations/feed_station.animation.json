@@ -1,0 +1,22 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.feed_station.idle": {
+      "loop": true,
+      "animation_length": 1.0,
+      "bones": {}
+    },
+    "animation.feed_station.use": {
+      "animation_length": 0.6,
+      "bones": {
+        "couvercle": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "0.2": [-45, 0, 0],
+            "0.6": [0, 0, 0]
+          }
+        }
+      }
+    }
+  }
+}

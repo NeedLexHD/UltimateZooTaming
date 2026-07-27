@@ -1,0 +1,30 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.binoculars.idle": {
+   "loop": true,
+   "animation_length": 3,
+   "bones": {
+    "root": {
+     "rotation": {
+      "0": [
+       0,
+       0,
+       0
+      ],
+      "1.5": [
+       1,
+       0,
+       0
+      ],
+      "3": [
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   }
+  }
+ }
+}

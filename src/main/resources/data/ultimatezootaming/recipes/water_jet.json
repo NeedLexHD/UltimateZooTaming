@@ -1,0 +1,22 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "pattern": [
+  "N",
+  "P",
+  "B"
+ ],
+ "key": {
+  "N": {
+   "item": "minecraft:dispenser"
+  },
+  "P": {
+   "item": "minecraft:water_bucket"
+  },
+  "B": {
+   "item": "minecraft:iron_ingot"
+  }
+ },
+ "result": {
+  "item": "ultimatezootaming:water_jet"
+ }
+}

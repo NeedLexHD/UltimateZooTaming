@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "ultimatezootaming:block/water_jet"
+  },
+  "facing=east": {
+   "model": "ultimatezootaming:block/water_jet",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "ultimatezootaming:block/water_jet",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "ultimatezootaming:block/water_jet",
+   "y": 270
+  }
+ }
+}

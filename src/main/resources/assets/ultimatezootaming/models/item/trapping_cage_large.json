@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ultimatezootaming:item/trapping_cage_large"
+  }
+}

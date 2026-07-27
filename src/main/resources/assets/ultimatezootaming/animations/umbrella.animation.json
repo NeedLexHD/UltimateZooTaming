@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.umbrella.idle": {
+      "loop": true,
+      "animation_length": 4,
+      "bones": {
+        "root": {
+          "rotation": {
+            "0": [0, 0, 0],
+            "2": [0, 0, 3],
+            "4": [0, 0, 0]
+          }
+        }
+      }
+    }
+  }
+}

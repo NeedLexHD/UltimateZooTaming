@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "ultimatezootaming:block/zoo_vault_top",
+    "bottom": "ultimatezootaming:block/zoo_vault_top",
+    "side": "ultimatezootaming:block/zoo_vault_front",
+    "particle": "ultimatezootaming:block/zoo_vault_side"
+  }
+}

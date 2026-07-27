@@ -1,0 +1,35 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.visitor_popcorn.idle": {
+   "loop": true,
+   "animation_length": 3,
+   "bones": {
+    "kernels": {
+     "position": {
+      "0": [
+       0,
+       0,
+       0
+      ],
+      "1": [
+       0,
+       0.2,
+       0
+      ],
+      "2": [
+       0,
+       0,
+       0
+      ],
+      "3": [
+       0,
+       0.1,
+       0
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "variant=0": { "model": "ultimatezootaming:block/litter_0" },
+    "variant=1": { "model": "ultimatezootaming:block/litter_1" },
+    "variant=2": { "model": "ultimatezootaming:block/litter_2" }
+  }
+}

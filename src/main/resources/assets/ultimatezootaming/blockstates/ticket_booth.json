@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "ultimatezootaming:block/ticket_booth" },
+    "facing=south": { "model": "ultimatezootaming:block/ticket_booth", "y": 180 },
+    "facing=west":  { "model": "ultimatezootaming:block/ticket_booth", "y": 270 },
+    "facing=east":  { "model": "ultimatezootaming:block/ticket_booth", "y": 90 }
+  }
+}

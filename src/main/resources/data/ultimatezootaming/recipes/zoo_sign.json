@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PEP",
+    " S "
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "ultimatezootaming:zoo_sign"
+  }
+}

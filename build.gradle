@@ -1,0 +1,82 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+version = '1.0.0'
+group = 'com.lex3d.ultimatezootaming'
+
+base {
+    archivesName = 'ultimatezootaming'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+
+    // Décommente si tu veux voir les logs Forge côté client en debug
+    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', 'ultimatezootaming'
+            // Fix indispensable pour les mixins des dependances deobf (GeckoLib) en dev :
+            // sans ca, leur refmap SRG ne se remappe pas vers les noms officiels et
+            // le jeu crash au demarrage avec "could not find any targets matching m_XXXXX_"
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods {
+                ultimatezootaming {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', 'ultimatezootaming'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods {
+                ultimatezootaming {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+    mavenCentral()
+    maven {
+        // GeckoLib — utile si tu actives l'animation des cages plus tard
+        name = "GeckoLib"
+        url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.2.0'
+
+    // GeckoLib : animations des cages de capture (voir blocks/TrappingCageBlockEntity
+    // + client/render/TrappingCageRenderer). Si la version 4.4.4 n'existe plus,
+    // verifie la derniere 4.x pour 1.20.1 sur https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.4.4')
+}
+
+// Vérifie et corrige les numéros de version de Forge/mappings si le build échoue :
+// https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html

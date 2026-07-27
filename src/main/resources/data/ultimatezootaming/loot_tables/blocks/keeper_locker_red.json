@@ -1,0 +1,1 @@
+{"type": "minecraft:block", "pools": [{"rolls": 1, "entries": [{"type": "minecraft:item", "name": "ultimatezootaming:keeper_locker_red", "conditions": [{"condition": "minecraft:block_state_property", "block": "ultimatezootaming:keeper_locker_red", "properties": {"half": "lower"}}]}], "conditions": [{"condition": "minecraft:survives_explosion"}]}]}

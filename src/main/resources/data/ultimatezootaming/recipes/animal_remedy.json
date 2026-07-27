@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:sugar" },
+    { "item": "minecraft:slime_ball" },
+    { "tag": "minecraft:small_flowers" }
+  ],
+  "result": { "item": "ultimatezootaming:animal_remedy", "count": 2 }
+}

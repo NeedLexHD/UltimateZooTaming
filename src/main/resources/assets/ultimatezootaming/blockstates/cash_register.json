@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ultimatezootaming:block/cash_register"
+    },
+    "facing=south": {
+      "model": "ultimatezootaming:block/cash_register",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ultimatezootaming:block/cash_register",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "ultimatezootaming:block/cash_register",
+      "y": 90
+    }
+  }
+}

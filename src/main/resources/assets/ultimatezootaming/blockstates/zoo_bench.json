@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ultimatezootaming:block/zoo_bench"
+    },
+    "facing=south": {
+      "model": "ultimatezootaming:block/zoo_bench",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ultimatezootaming:block/zoo_bench",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "ultimatezootaming:block/zoo_bench",
+      "y": 90
+    }
+  }
+}

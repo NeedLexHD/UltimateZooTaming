@@ -1,0 +1,19 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "pattern": [
+  "W",
+  "B",
+  "W"
+ ],
+ "key": {
+  "W": {
+   "tag": "minecraft:planks"
+  },
+  "B": {
+   "item": "minecraft:barrel"
+  }
+ },
+ "result": {
+  "item": "ultimatezootaming:feed_station"
+ }
+}

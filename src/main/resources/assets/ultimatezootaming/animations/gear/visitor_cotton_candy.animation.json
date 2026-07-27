@@ -1,0 +1,25 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.visitor_cotton_candy.idle": {
+   "loop": true,
+   "animation_length": 3,
+   "bones": {
+    "cloud": {
+     "rotation": {
+      "0": [
+       0,
+       0,
+       0
+      ],
+      "3": [
+       0,
+       360,
+       0
+      ]
+     }
+    }
+   }
+  }
+ }
+}

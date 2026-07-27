@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "ultimatezootaming:block/recruitment_computer"
+  },
+  "facing=east": {
+   "model": "ultimatezootaming:block/recruitment_computer",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "ultimatezootaming:block/recruitment_computer",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "ultimatezootaming:block/recruitment_computer",
+   "y": 270
+  }
+ }
+}

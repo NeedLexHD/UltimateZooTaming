@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "IPI",
+    "III"
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_bars" },
+    "P": { "item": "minecraft:iron_ingot" }
+  },
+  "result": { "item": "ultimatezootaming:trapping_cage_small", "count": 1 }
+}

@@ -1,0 +1,22 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "pattern": [
+  "EIE",
+  "IDI",
+  "III"
+ ],
+ "key": {
+  "I": {
+   "item": "minecraft:iron_ingot"
+  },
+  "D": {
+   "item": "minecraft:diamond"
+  },
+  "E": {
+   "item": "minecraft:emerald"
+  }
+ },
+ "result": {
+  "item": "ultimatezootaming:director_tablet"
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "ultimatezootaming:block/toy_bamboo"
+  },
+  "facing=south": {
+   "model": "ultimatezootaming:block/toy_bamboo",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "ultimatezootaming:block/toy_bamboo",
+   "y": 270
+  },
+  "facing=east": {
+   "model": "ultimatezootaming:block/toy_bamboo",
+   "y": 90
+  }
+ }
+}

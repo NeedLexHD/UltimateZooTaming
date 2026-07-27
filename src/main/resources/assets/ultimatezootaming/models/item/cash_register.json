@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ultimatezootaming:item/cash_register_icon"
+  }
+}

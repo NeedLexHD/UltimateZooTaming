@@ -1,0 +1,37 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.photo_spot.idle": {
+      "loop": true,
+      "animation_length": 3.0,
+      "bones": {
+        "appareil": {
+          "rotation": {
+            "0.0": [0, -4, 0],
+            "1.5": [0, 4, 0],
+            "3.0": [0, -4, 0]
+          }
+        }
+      }
+    },
+    "animation.photo_spot.use": {
+      "animation_length": 0.5,
+      "bones": {
+        "flash": {
+          "scale": {
+            "0.0": [1, 1, 1],
+            "0.1": [3, 3, 3],
+            "0.5": [1, 1, 1]
+          }
+        },
+        "appareil": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "0.1": [-5, 0, 0],
+            "0.5": [0, 0, 0]
+          }
+        }
+      }
+    }
+  }
+}
