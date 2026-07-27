@@ -619,6 +619,9 @@ public class ZooKeeperEntity extends PathfinderMob implements GeoEntity {
         }
         this.ownerUUID = tag.hasUUID("Owner") ? tag.getUUID("Owner") : null;
         if (tag.contains("Skin")) this.entityData.set(SKIN, tag.getInt("Skin"));
+        // FIX : restaurer skinRolled depuis le NBT pour eviter la reassignation
+        // du skin et du nom a chaque rechargement de chunk.
+        if (tag.contains("SkinRolled")) this.skinRolled = tag.getBoolean("SkinRolled");
         if (tag.contains("Job")) this.entityData.set(JOB, tag.getInt("Job"));
         if (tag.contains("Strike")) this.entityData.set(STRIKE, tag.getBoolean("Strike"));
         if (tag.contains("Xp")) this.entityData.set(XP, tag.getInt("Xp"));
