@@ -1,218 +1,318 @@
-# ULTIMATE ZOO TAMING — Documentation complète des mécaniques
-Mod Forge 1.20.1 pour le modpack **Animals Zoo**. Un vrai Zoo Tycoon en survie :
-apprivoise, construis des enclos, embauche du personnel, accueille des visiteurs
-qui se baladent, mangent, achètent et repartent contents.
+<div align="center">
 
-═══════════════════════════════════════════════════════════════════════════════
-## SOMMAIRE
-1. Apprivoisement, nourriture & traits
-2. Transport des animaux
-3. Les enclos (en VOLUME, bassins jusqu'au fond)
-4. Le bien-être (note 0-100)
-5. Comment les animaux mangent
-6. Les maladies
-7. Les employés (métiers, rondes, dortoir, vestiaires)
-8. Les visiteurs (IA de parcours, groupes, files d'attente)
-9. Les objets des visiteurs (soda, popcorn, glace, barbe à papa, ballons)
-10. L'argent
-11. La journée, les événements, pause & reset
-12. Les objectifs à primes
-13. Événements animaux
-14. La carte du zoo
-15. Zones d'interaction (photo, nourrissage, jet d'eau — animées)
-16. Aménagement & ambiance
-17. Le tableau de bord
-18. La tablette du directeur
-19. Le mobilier 3D animé
-20. Récapitulatif blocs & items
+# 🦁 Ultimate Zoo Taming
 
-═══════════════════════════════════════════════════════════════════════════════
-## 1. APPRIVOISEMENT, NOURRITURE & TRAITS
-Régimes : herbivore / carnivore / piscivore.
-**Croquettes** (9 = 3 régimes × 3 qualités) : nourris un animal sauvage avec la
-croquette de son régime → apprivoisé. **Fourrage** (fodder/meat/fish) : remplit
-les mangeoires.
-**Traits** (visibles dans la fiche, avec l'effet) : Glouton, Câlin, Grognon,
-Énergique, Robuste, Sociable, ou aucun.
+**Un vrai Zoo Tycoon en survie Minecraft — apprivoise, construis, gère, accueille.**
 
-═══════════════════════════════════════════════════════════════════════════════
-## 2. TRANSPORT DES ANIMAUX
-Cage + filets pour déplacer un animal apprivoisé. Le câlin passe par la Tablette
-(§18) ; le Sifflet ne touche jamais un animal assigné à un enclos.
+![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-brightgreen?style=for-the-badge&logo=creativecommons&logoColor=white)
+![Forge](https://img.shields.io/badge/Forge-47%2B-orange?style=for-the-badge)
+![GeckoLib](https://img.shields.io/badge/GeckoLib-4.4%2B-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+![Modpack](https://img.shields.io/badge/Modpack-Animals%20Zoo-purple?style=for-the-badge)
+![Author](https://img.shields.io/badge/Author-Lex3D-red?style=for-the-badge)
 
-═══════════════════════════════════════════════════════════════════════════════
-## 3. LES ENCLOS — en VOLUME
-Vrai volume : sol + 4 blocs dessous et **40 au-dessus**. Mini 8 blocs (insectes).
-**Toise d'arpenteur** : clic dans un espace clos → flood-fill forme libre. Verre
-et blocs pleins = murs (même sous l'eau). Sur les BASSINS, le scan descend
-**jusqu'au fond** : toute la colonne d'eau fait partie de l'enclos (poissons à
-toute profondeur, mangeoires immergées comptées).
-**Sélecteur de parcelle** (mode Enclos) : 2 coins = enclos rectangulaire.
-**Panneau de zoo** : diagnostic complet au clic.
-**Supprimer un enclos** : onglet Enclos → bouton (2 clics), animaux libérés.
+</div>
 
-═══════════════════════════════════════════════════════════════════════════════
-## 4. LE BIEN-ÊTRE — note 0-100
-Espace /30 · Habitat /25 · Nourriture /20 (mangeoire du bon régime n'importe où
-dans l'enclos) · Compagnie /15 (congénères) · Santé /10. Note zoo = moyenne des
-enclos ×0.8 + espèces − malades.
+---
 
-═══════════════════════════════════════════════════════════════════════════════
-## 5. COMMENT LES ANIMAUX MANGENT
-Les animaux se DÉPLACENT vers une mangeoire de leur régime (ZooEatGoal).
-**Mangeoires** : 6 styles, WATERLOGGABLES (posables dans l'eau). Le Nourrisseur
-nage/plonge pour remplir les mangeoires aquatiques.
+## 📋 Sommaire
 
-═══════════════════════════════════════════════════════════════════════════════
-## 6. LES MALADIES
-Malade (✚) → Vétérinaire ou Remède animalier. 1 sur 4 est GRAVE (✚✚) → Remède
-supérieur (ton job).
+- [🐾 Apprivoisement & Traits](#-apprivoisement-nourriture--traits)
+- [🚛 Transport des animaux](#-transport-des-animaux)
+- [🏗️ Les enclos](#️-les-enclos--en-volume)
+- [❤️ Le bien-être](#️-le-bien-être--note-0-100)
+- [🍖 Comment les animaux mangent](#-comment-les-animaux-mangent)
+- [🦠 Les maladies](#-les-maladies)
+- [👷 Les employés](#-les-employés)
+- [🚶 Les visiteurs](#-les-visiteurs)
+- [🛍️ Objets des visiteurs](#️-les-objets-des-visiteurs)
+- [💰 L'argent](#-largent)
+- [📅 La journée & événements](#-la-journée-événements-pause--reset)
+- [🏆 Objectifs à primes](#-les-objectifs-à-primes)
+- [🐘 Événements animaux](#-événements-animaux)
+- [🗺️ La carte du zoo](#️-la-carte-du-zoo)
+- [📸 Zones d'interaction](#-zones-dinteraction)
+- [🌿 Aménagement & ambiance](#-aménagement--ambiance)
+- [📊 Le tableau de bord](#-le-tableau-de-bord)
+- [📱 La tablette du directeur](#-la-tablette-du-directeur)
+- [🪑 Mobilier 3D animé](#-le-mobilier-3d-animé)
+- [📦 Récapitulatif blocs & items](#-récapitulatif--blocs--items)
 
-═══════════════════════════════════════════════════════════════════════════════
-## 7. LES EMPLOYÉS
-Salaire prélevé sur la Caisse ; Caisse vide = GRÈVE. **5 métiers** (bouton dans
-l'onglet Enclos) : Polyvalent / Vétérinaire (1 par enclos) / Nourrisseur (tour
-du parc) / Garde / Vendeur.
+---
 
-**RONDES CRÉDIBLES** (le jour, quand pas de tâche urgente) :
-- Vétérinaire & Polyvalent : font le tour de LEUR enclos et s'arrêtent près des
-  animaux comme s'ils les **inspectaient** (2-4s chacun).
-- Nourrisseur & Garde : circulent **entre les enclos** (tour du parc).
-- Ils **saluent le directeur** (toi) quand tu passes près d'eux (petit signe,
-  cooldown 10-20s).
+## 🐾 Apprivoisement, nourriture & traits
 
-**Vitesse dans l'eau** : les soigneurs nagent activement (traversent les bassins
-sans lambiner) — modéré pour rester crédible.
-**Protection** : employés, visiteurs et animaux apprivoisés ne subissent AUCUN
-dégât, ne sont pas ciblés par les mobs, et les mobs ne s'attaquent pas entre eux.
+**Régimes** : herbivore / carnivore / piscivore.
 
-**Embauche** : Ordinateur de recrutement (3 candidats/jour) ou Sifflet.
-**Dortoir** (Sélecteur, mode Dortoir) + lits vanilla : la NUIT, chaque employé
-dort dans un vrai lit libre (jamais dans le vide). Le repos au vestiaire ne se
-fait QUE zoo fermé — le jour, ils travaillent.
-**Vestiaires par métier** (5 blocs teintés) : Polyvalent bois, Vétérinaire vert,
-Nourrisseur jaune, Garde rouge, Vendeur bleu.
+**Croquettes** (9 = 3 régimes × 3 qualités) : nourris un animal sauvage avec la croquette de son régime → apprivoisé.
+**Fourrage** (`fodder` / `meat` / `fish`) : remplit les mangeoires.
 
-═══════════════════════════════════════════════════════════════════════════════
-## 8. LES VISITEURS (IA de parcours)
-Apparaissent à l'Entrée si : zoo ouvert, note correcte, entrée dans le
-territoire, pas d'évasion.
+**Traits** (visibles dans la fiche, avec leur effet) :
 
-**Cerveau de visite** — vrai parcours planifié :
-1. Fatigué (>75) → va s'ASSEOIR sur un banc, récupère, repart
-2. Soif/Faim (>70) → stand boissons/repas (sinon il RÂLE)
-3. Sinon → voir un enclos pas encore visité (choisi AU HASARD parmi les 3 plus
-   proches), s'attarde et réagit selon le bien-être réel (heureux/triste)
-4. Entre deux → une borne d'interaction (photo/nourrissage/jet d'eau)
-5. Content → un souvenir
-6. Il ne part QU'APRÈS avoir vu TOUS les enclos
+| Trait | Effet |
+|-------|-------|
+| 🍗 Glouton | Mange plus souvent |
+| 🤗 Câlin | Satisfaction +bonus directeur |
+| 😠 Grognon | Satisfaction difficile à monter |
+| ⚡ Énergique | Se déplace plus vite |
+| 💪 Robuste | Résiste mieux aux maladies |
+| 👥 Sociable | Bonus compagnie élevé |
 
-**Flânerie** : temps d'observation variable selon le RYTHME du visiteur (pressé
-~2.5s / normal ~5s / contemplatif ~9s, tiré au spawn) et la beauté de l'enclos.
-**Émotes** au-dessus de la tête : cœur (bel enclos), goutte (soif/faim), fumée
-(enclos vide), paillettes (content).
-**Boutiques/bornes** choisies au hasard parmi les plus proches.
-**Escaliers** : les visiteurs les montent et les empruntent (comptés comme allée).
+---
 
-**GROUPES / FAMILLES** : ~1 visiteur sur 3 arrive accompagné de 1-2 autres, dont
-~40% d'ENFANTS (plus petits). Les accompagnants SUIVENT le chef de groupe à
-travers le parc (les enfants trottinent pour suivre).
+## 🚛 Transport des animaux
 
-**FILES D'ATTENTE** : aux boutiques et bornes, les visiteurs se placent en file
-derrière ceux déjà là (patients ~15s) au lieu de se superposer.
+Cage + filets pour déplacer un animal apprivoisé. Le câlin passe par la Tablette (§ Tablette du directeur). Le **Sifflet** ne touche jamais un animal déjà assigné à un enclos.
 
-═══════════════════════════════════════════════════════════════════════════════
-## 9. LES OBJETS DES VISITEURS
-Les visiteurs tiennent un vrai objet 3D en main (comme un villageois) :
-- 🥤 **Soda**, 🍿 **Popcorn**, 🍦 **Glace**, 🍭 **Barbe à papa** — CONSOMMABLES
-  par le joueur aussi (le soda se boit, les autres se mangent)
-- 🎈 **Ballon** en 6 couleurs (rouge, bleu, vert, jaune, rose, violet), avec
-  ficelle — non consommable
-Ils en ont un au spawn (~1/3, ballon pour les enfants) et en achètent aux stands
-(soda=boissons, snack=repas, ballon=souvenir).
+---
 
-═══════════════════════════════════════════════════════════════════════════════
-## 10. L'ARGENT
-**Caisse du Zoo** : trésorerie unique. **Caisse enregistreuse** : 5 types
-(Souvenirs/Repas/Glaces/Boissons/Photos), stock 9 slots, prix libres. AUCUNE
-VENTE SANS VENDEUR à ≤3 blocs. Billet : Bas ×0.5 / Normal / Cher ×1.75.
+## 🏗️ Les enclos — en VOLUME
 
-═══════════════════════════════════════════════════════════════════════════════
-## 11. LA JOURNÉE, ÉVÉNEMENTS, PAUSE & RESET
-Ouvre à l'aube, ferme à la nuit (bilan + graphe 7 jours).
-**Événement du jour** (1/3) : Promo / Inspection sanitaire / Canicule.
-**Bouton PAUSE** (onglet Direction) : ferme le zoo temporairement (même le jour,
-les visiteurs ne viennent plus) ; "Rouvrir" le relance. Sauvegardé.
-**Bouton RÉINITIALISER** (2 clics) : jour 0, argent/stats à zéro. Ne touche NI
-enclos NI animaux NI bâtiments.
+- Vrai volume : sol + 4 blocs dessous et **40 blocs au-dessus**
+- Minimum 8 blocs (insectes)
+- **Toise d'arpenteur** : clic dans un espace clos → flood-fill forme libre
+- Verre et blocs pleins = murs (même sous l'eau)
+- **Bassins** : le scan descend jusqu'au fond — toute la colonne d'eau fait partie de l'enclos
+- **Sélecteur de parcelle** (mode Enclos) : 2 coins = enclos rectangulaire
+- **Panneau de zoo** : diagnostic complet au clic droit
+- **Supprimer un enclos** : onglet Enclos → bouton (2 clics), animaux libérés
 
-═══════════════════════════════════════════════════════════════════════════════
-## 12. LES OBJECTIFS À PRIMES (10)
-5 espèces (50◆) · 10 espèces (100◆) · 20 animaux (100◆) · note 25 (30◆) · note
-50 (80◆) · note 70 (150◆) · note 90 (300◆) · 100 visiteurs (120◆) · 1000◆ gagnées
-(200◆) · 5 employés (80◆). Versées à la fermeture.
+---
 
-═══════════════════════════════════════════════════════════════════════════════
-## 13. ÉVÉNEMENTS ANIMAUX
-Vedettes (+20% affluence chacune) · Naissances (bébé auto-assigné, "appuie sur K"
-pour nommer) · Évasions (le Garde contient, entrée fermée) · Anti-disparition
-(animaux persistants, protégés, chunks du territoire chargés).
+## ❤️ Le bien-être — note 0-100
 
-═══════════════════════════════════════════════════════════════════════════════
-## 14. LA CARTE DU ZOO (zoo_map)
-Vue du ciel + marqueurs. 3 modes : Voir / Territoire (revendiquer les chunks,
-restent chargés) / Chemins (les visiteurs préfèrent dalles, escaliers, Allée de
-zoo, ou blocs ajoutés au bouton).
+| Critère | Points |
+|---------|--------|
+| Espace | /30 |
+| Habitat | /25 |
+| Nourriture | /20 |
+| Compagnie (congénères) | /15 |
+| Santé | /10 |
 
-═══════════════════════════════════════════════════════════════════════════════
-## 15. ZONES D'INTERACTION (bornes ANIMÉES GeckoLib)
-Trois bornes face à un enclos. Modèles 3D orientés + animations :
-- 📸 **Point photo** : le flash s'allume (anim), étoiles + son
-- 🥕 **Borne de nourrissage** : le couvercle s'ouvre, cœurs sur l'animal (+2)
-- 💦 **Jet d'eau** (canon métal type lance) : la buse tire, jet balistique qui
-  retombe sur l'animal (+3)
-Le visiteur paie 2◆. **CLIC DROIT** sur une borne = déclenche l'effet toi-même
-(pour tester).
+> **Note zoo** = moyenne des enclos × 0.8 + espèces − malades
 
-═══════════════════════════════════════════════════════════════════════════════
-## 16. AMÉNAGEMENT & AMBIANCE
-Ambiance 0-10 par enclos (fleurs, feuillages, ARBRES hauts, lanternes, glace/
-neige, eau, bancs autour) → jusqu'à +40% d'affluence. Banc (les fatigués
-s'assoient), Poubelle (déchets).
+---
 
-═══════════════════════════════════════════════════════════════════════════════
-## 17. LE TABLEAU DE BORD (Bâton de gestion) — 4 onglets
-- **Enclos** : zones, animaux, renommage, affectation employés + métier, Supprimer
-- **Employés** : zones de repos + liste du personnel (affichage seul : nom+métier,
-  l'affectation/rôle se gère dans l'onglet Enclos)
-- **Boutiques** : caisses, type, stock, vendeur
-- **Direction** : note décomposée, affluence, bilan, graphe 7j, avis, boutons
-  Objectifs / Habitats / prix billet / Pause / Réinitialiser
+## 🍖 Comment les animaux mangent
 
-═══════════════════════════════════════════════════════════════════════════════
-## 18. LA TABLETTE DU DIRECTEUR (director_tablet)
-Clic droit sur un animal = fiche (nom, espèce, trait+effet, santé, note, 5
-barres) + câlin du directeur (+5 satisfaction, cooldown 5 min).
+Les animaux se **déplacent** vers une mangeoire de leur régime (`ZooEatGoal`).
+**Mangeoires** : 6 styles, **waterloggables** (posables dans l'eau). Le Nourrisseur nage et plonge pour remplir les mangeoires aquatiques.
 
-═══════════════════════════════════════════════════════════════════════════════
-## 19. LE MOBILIER 3D ANIMÉ (GeckoLib)
-Caisse enregistreuse (tiroir+clochette), Caisse du Zoo (molette+porte), Entrée
-(tourniquet), Panneau/Banc/Poubelle, Mangeoires, Vestiaires, et les 3 Bornes
-d'interaction (photo/nourrissage/jet d'eau).
+---
 
-═══════════════════════════════════════════════════════════════════════════════
-## 20. RÉCAPITULATIF — BLOCS & ITEMS
+## 🦠 Les maladies
 
-**Blocs (22)** : cash_register, zoo_vault, zoo_entrance, zoo_sign, zoo_bench,
-zoo_bin, zoo_path, recruitment_computer, photo_spot, feed_station, water_jet,
-keeper_locker ×5, feeder ×6.
+- **Malade** (✚) → Vétérinaire ou Remède animalier
+- **Grave** (✚✚, 1 sur 4) → Remède supérieur (craft spécial)
 
-**Items visiteurs (NEW)** : visitor_soda, visitor_popcorn, visitor_icecream,
-visitor_cotton_candy (consommables), balloon ×6 couleurs.
+---
 
-**Items outils** : surveyor_staff, plot_selector, zoo_map, zoo_guide, whistle,
-director_tablet, animal_remedy, super_remedy, fodder ×3, croquettes ×9,
-occupied_container, zoo_keeper_spawn_egg.
+## 👷 Les employés
 
-═══════════════════════════════════════════════════════════════════════════════
-FIN — pour signaler un doublon ou une incohérence, cite la section concernée.
+Salaire prélevé sur la Caisse. **Caisse vide = GRÈVE.**
+
+### 5 métiers
+
+| Métier | Rôle | Vestiaire |
+|--------|------|-----------|
+| 🔧 Polyvalent | Ronde + tâches générales | Bois |
+| 🩺 Vétérinaire | 1 par enclos, soins | Vert |
+| 🍖 Nourrisseur | Tour du parc, remplit mangeoires | Jaune |
+| 🛡️ Garde | Contient les évasions | Rouge |
+| 🛒 Vendeur | Reste aux caisses | Bleu |
+
+### Rondes crédibles
+- **Vétérinaire & Polyvalent** : font le tour de leur enclos et s'arrêtent près des animaux (inspection 2-4s)
+- **Nourrisseur & Garde** : circulent entre les enclos
+- **Saluent le directeur** quand tu passes près d'eux (cooldown 10-20s)
+
+### Bandeau de tâche 💬
+Au-dessus de chaque employé, une icône + texte indique la tâche en cours en temps réel (visible à 8 blocs). Configurable via `showKeeperTask` dans `ultimatezootaming-client.toml`.
+
+### Autres détails
+- **Vitesse dans l'eau** : les soigneurs nagent activement
+- **Protection** : employés, visiteurs et animaux apprivoisés sont invulnérables et ignorés par les mobs
+- **Embauche** : Ordinateur de recrutement (3 candidats/jour) ou Sifflet
+- **Dortoir** : Sélecteur (mode Dortoir) + lits vanilla → chaque employé dort dans un vrai lit libre la nuit
+
+---
+
+## 🚶 Les visiteurs
+
+Apparaissent à l'Entrée si : zoo ouvert, note correcte, entrée dans le territoire, pas d'évasion.
+
+### Cerveau de visite — parcours planifié
+1. Fatigué (>75) → s'**assoit** sur un banc, récupère, repart
+2. Soif/Faim (>70) → stand boissons/repas (sinon il **râle**)
+3. Sinon → voir un enclos pas encore visité (3 plus proches, choix aléatoire)
+4. Entre deux → une borne d'interaction
+5. Content → achète un souvenir
+6. Part **seulement après avoir vu tous les enclos**
+
+### Comportements
+- **Rythme** : pressé ~2.5s / normal ~5s / contemplatif ~9s (tiré au spawn)
+- **Émotes** au-dessus de la tête : 💚 bel enclos · 💧 soif/faim · 💨 enclos vide · ✨ content
+- **Groupes/familles** : 1 visiteur sur 3 arrive avec 1-2 accompagnants, dont ~40% d'enfants
+- **Files d'attente** : les visiteurs se placent en file aux boutiques (patience ~15s)
+- **Escaliers** : montés et empruntés normalement
+
+---
+
+## 🛍️ Les objets des visiteurs
+
+Les visiteurs tiennent un vrai objet 3D en main :
+
+| Objet | Type | Consommable |
+|-------|------|-------------|
+| 🥤 Soda | Boisson | ✅ |
+| 🍿 Popcorn | Snack | ✅ |
+| 🍦 Glace | Snack | ✅ |
+| 🍭 Barbe à papa | Snack | ✅ |
+| 🎈 Ballon (×6 couleurs) | Souvenir | ❌ |
+
+---
+
+## 💰 L'argent
+
+- **Caisse du Zoo** : trésorerie unique
+- **Caisse enregistreuse** : 5 types (Souvenirs / Repas / Glaces / Boissons / Photos), stock 9 slots, prix libres
+- **Aucune vente sans Vendeur** à ≤ 3 blocs
+- **Prix du billet** : Bas ×0.5 / Normal ×1 / Cher ×1.75
+
+---
+
+## 📅 La journée, événements, pause & reset
+
+- Ouvre à l'aube, ferme à la nuit (bilan + graphe 7 jours)
+- **Événement du jour** (1 chance sur 3) : Promo / Inspection sanitaire / Canicule
+- **Bouton PAUSE** : ferme temporairement le zoo (visiteurs stoppés), `Rouvrir` le relance
+- **Bouton RÉINITIALISER** (2 clics) : jour 0, argent/stats à zéro — ne touche ni enclos, ni animaux, ni bâtiments
+
+---
+
+## 🏆 Les objectifs à primes
+
+| Objectif | Prime |
+|----------|-------|
+| 5 espèces | 50 ◆ |
+| 10 espèces | 100 ◆ |
+| 20 animaux | 100 ◆ |
+| Note 25 | 30 ◆ |
+| Note 50 | 80 ◆ |
+| Note 70 | 150 ◆ |
+| Note 90 | 300 ◆ |
+| 100 visiteurs | 120 ◆ |
+| 1000 ◆ gagnées | 200 ◆ |
+| 5 employés | 80 ◆ |
+
+> Primes versées à la fermeture du zoo.
+
+---
+
+## 🐘 Événements animaux
+
+- **Vedettes** : +20% d'affluence chacune
+- **Naissances** : bébé auto-assigné à l'enclos, appuie sur `K` pour le nommer
+- **Évasions** : le Garde contient l'animal, entrée fermée automatiquement
+- **Anti-disparition** : animaux persistants, protégés, chunks du territoire toujours chargés
+
+---
+
+## 🗺️ La carte du zoo
+
+3 modes sur l'item `zoo_map` :
+- 👁️ **Voir** : vue du ciel + marqueurs
+- 🚩 **Territoire** : revendiquer les chunks (restent chargés)
+- 🛤️ **Chemins** : les visiteurs préfèrent dalles, escaliers, Allée de zoo, ou blocs personnalisés
+
+---
+
+## 📸 Zones d'interaction
+
+Trois bornes **animées GeckoLib** à placer face à un enclos :
+
+| Borne | Effet | Gain |
+|-------|-------|------|
+| 📸 Point photo | Flash + étoiles + son | — |
+| 🥕 Borne de nourrissage | Couvercle s'ouvre, cœurs sur l'animal | +2 |
+| 💦 Jet d'eau | Buse tire, jet balistique | +3 |
+
+Le visiteur paie **2 ◆**. Clic droit sur une borne = déclenche l'effet toi-même (test).
+
+---
+
+## 🌿 Aménagement & ambiance
+
+Ambiance **0-10** par enclos selon : fleurs, feuillages, arbres hauts, lanternes, glace/neige, eau, bancs autour → jusqu'à **+40% d'affluence**.
+
+- **Banc** : les visiteurs fatigués s'assoient
+- **Poubelle** : collecte les déchets
+
+---
+
+## 📊 Le tableau de bord
+
+Item : **Bâton de gestion** — 4 onglets :
+
+| Onglet | Contenu |
+|--------|---------|
+| 🏗️ Enclos | Zones, animaux, renommage, affectation employés, Supprimer |
+| 👷 Employés | Zones de repos, liste du personnel |
+| 🛒 Boutiques | Caisses, type, stock, vendeur |
+| 📊 Direction | Note, affluence, bilan, graphe 7j, avis, boutons de gestion |
+
+---
+
+## 📱 La tablette du directeur
+
+Clic droit sur un animal = fiche complète :
+- Nom, espèce, trait + effet
+- Santé, note, 5 barres de stats
+- **Câlin du directeur** : +5 satisfaction (cooldown 5 min)
+
+---
+
+## 🪑 Le mobilier 3D animé
+
+Tous les blocs fonctionnels ont un **modèle GeckoLib** avec animations :
+
+- Caisse enregistreuse (tiroir + clochette)
+- Caisse du Zoo (molette + porte)
+- Entrée (tourniquet)
+- Panneau, Banc, Poubelle
+- Mangeoires (×6 styles)
+- Vestiaires (×5 couleurs)
+- Bornes d'interaction (photo / nourrissage / jet d'eau)
+
+---
+
+## 📦 Récapitulatif — blocs & items
+
+<details>
+<summary><b>📦 Blocs (22)</b></summary>
+
+`cash_register` `zoo_vault` `zoo_entrance` `zoo_sign` `zoo_bench` `zoo_bin` `zoo_path` `recruitment_computer` `photo_spot` `feed_station` `water_jet` `keeper_locker ×5` `feeder ×6`
+
+</details>
+
+<details>
+<summary><b>🛍️ Items visiteurs</b></summary>
+
+`visitor_soda` `visitor_popcorn` `visitor_icecream` `visitor_cotton_candy` *(consommables)* · `balloon` ×6 couleurs
+
+</details>
+
+<details>
+<summary><b>🔧 Items outils</b></summary>
+
+`surveyor_staff` `plot_selector` `zoo_map` `zoo_guide` `whistle` `director_tablet` `animal_remedy` `super_remedy` `fodder ×3` `croquettes ×9` `occupied_container` `zoo_keeper_spawn_egg`
+
+</details>
+
+---
+
+<div align="center">
+
+Fait avec ❤️ par **Lex3D** — pour signaler un bug ou une incohérence, [ouvre une issue](https://github.com/NeedLexHD/UltimateZooTaming/issues).
+
+</div>
