@@ -1,34 +1,26 @@
 {
- "format_version": "1.8.0",
- "animations": {
-  "animation.zoo_entrance.idle": {
-   "loop": true,
-   "animation_length": 2.0
-  },
-  "animation.zoo_entrance.turn": {
-   "loop": false,
-   "animation_length": 0.8,
-   "bones": {
-    "turnstile": {
-     "rotation": {
-      "0.0": [
-       0,
-       0,
-       0
-      ],
-      "0.6": [
-       0,
-       190,
-       0
-      ],
-      "0.8": [
-       0,
-       180,
-       0
-      ]
-     }
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.zoo_entrance.spin": {
+      "animation_length": 1.0,
+      "loop": true,
+      "bones": {
+        "turnstile": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "1.0": [0, 90, 0]
+          }
+        }
+      }
+    },
+    "animation.zoo_entrance.idle": {
+      "animation_length": 0.0,
+      "loop": true,
+      "bones": {
+        "turnstile": {
+          "rotation": [0, 0, 0]
+        }
+      }
     }
-   }
   }
- }
 }

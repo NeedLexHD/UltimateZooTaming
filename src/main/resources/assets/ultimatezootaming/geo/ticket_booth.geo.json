@@ -1,0 +1,95 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.ticket_booth",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 3,
+        "visible_bounds_offset": [0, 1, 0]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [0, 0, 0],
+          "cubes": [
+            {
+              "comment": "Mur arriere",
+              "origin": [-8, 0, 7],
+              "size": [16, 14, 1],
+              "uv": [0, 0]
+            },
+            {
+              "comment": "Mur gauche",
+              "origin": [-8, 0, -8],
+              "size": [1, 14, 16],
+              "uv": [18, 0]
+            },
+            {
+              "comment": "Mur droit",
+              "origin": [7, 0, -8],
+              "size": [1, 14, 16],
+              "uv": [36, 0]
+            },
+            {
+              "comment": "Sol interieur",
+              "origin": [-7, 0, -8],
+              "size": [14, 1, 15],
+              "uv": [0, 50]
+            },
+            {
+              "comment": "Toit",
+              "origin": [-9, 14, -9],
+              "size": [18, 1, 18],
+              "uv": [0, 30]
+            },
+            {
+              "comment": "Gouttiere avant",
+              "origin": [-9, 13, -9],
+              "size": [18, 1, 1],
+              "uv": [0, 32]
+            },
+            {
+              "comment": "Comptoir bas",
+              "origin": [-7, 8, -8],
+              "size": [14, 3, 3],
+              "uv": [0, 34]
+            },
+            {
+              "comment": "Rebord comptoir",
+              "origin": [-7, 11, -8],
+              "size": [14, 1, 4],
+              "uv": [0, 46]
+            },
+            {
+              "comment": "Vitre haute gauche",
+              "origin": [-7, 8, -8],
+              "size": [3, 6, 1],
+              "uv": [0, 48]
+            },
+            {
+              "comment": "Vitre haute droite",
+              "origin": [4, 8, -8],
+              "size": [3, 6, 1],
+              "uv": [0, 48]
+            },
+            {
+              "comment": "Traverse vitre (montant central)",
+              "origin": [-1, 8, -8],
+              "size": [2, 6, 1],
+              "uv": [34, 48]
+            },
+            {
+              "comment": "Bandeau enseigne BILLETS",
+              "origin": [-7, 12, -8.5],
+              "size": [14, 2, 1],
+              "uv": [0, 60]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
